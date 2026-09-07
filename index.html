@@ -88,7 +88,7 @@
           <span class="meta__label">Public repos<br><em>all open source</em></span>
         </div>
         <div class="meta__item">
-          <span class="meta__num">03</span>
+          <span class="meta__num">04</span>
           <span class="meta__label">Featured builds<br><em>maintained</em></span>
         </div>
         <div class="meta__item">
@@ -109,7 +109,7 @@
         <div class="term__line term__out">Hi, I'm @TheElephantCoder — tinkering with tech.</div>
         <div class="term__line term__out muted">→ security · systems · docker · low-level</div>
         <div class="term__line"><span class="term__prompt">$</span> ls projects/</div>
-        <div class="term__line term__out">bit-compact/ &nbsp; NexUSB/ &nbsp; claw-security-auditor/</div>
+        <div class="term__line term__out">bit-compact/ &nbsp; NexUSB/ &nbsp; claw-auditor/ &nbsp; agent-harness/</div>
         <div class="term__line"><span class="term__prompt">$</span> cat stack.txt</div>
         <div class="term__line term__out">python &nbsp; rust &nbsp; c &nbsp; c++ &nbsp; bash &nbsp; docker</div>
         <div class="term__line"><span class="term__prompt">$</span> <span class="term__cursor"></span></div>
@@ -156,7 +156,7 @@
     <div class="section__head">
       <div>
         <div class="kicker mono">02 — SELECTED WORK</div>
-        <h2>Three projects<br><span class="serif">I kinda finished</span></h2>
+        <h2>Four projects<br><span class="serif">I kinda finished</span></h2>
       </div>
       <p class="section__desc">
         All projects are open source. No wrappers around APIs — actual tooling you can build, boot, or run locally. And yes, they work on my machine.
@@ -164,6 +164,54 @@
     </div>
 
     <div class="work__grid">
+      <!-- agent-harness -->
+      <article class="project" data-tilt>
+        <div class="project__top">
+          <div class="project__eyebrow mono">PERFORMANCE LAYER · AGENT HARNESS · NODE / PYTHON</div>
+          <div class="project__year mono"><span data-commits="TheElephantCoder/agent-harness">22</span> COMMITS · 2★</div>
+        </div>
+        <div class="project__body">
+          <div class="project__main">
+            <h3>agent-harness</h3>
+            <p class="project__tagline">Performance layer for coding agents — skills, instincts, memory, security and research-first.</p>
+            <p class="project__text">
+              I built this because agents kept re-reading the same 250k LOC for 3 minutes and then guessing anyway. Harness caches what matters, enforces a research step before code, and transpiles one set of skills to 8 tools — Claude Code, Codex, Opencode, Cursor, Kiro, Cline, Aider and more.
+            </p>
+            <ul class="project__bullets">
+              <li><span class="mono">13s</span> cold start — was 180s · tokens down 65% · tool calls down 40%</li>
+              <li>Skills, instincts, memory (MEMORY.md), security (default deny), research-first flow</li>
+              <li>One harness, 8 adapters — write once, use everywhere</li>
+            </ul>
+            <div class="project__tags"><span>TypeScript</span><span>Node</span><span>Python</span><span>Agents</span><span>Performance</span><span>Security</span></div>
+            <div class="project__links">
+              <a href="https://github.com/TheElephantCoder/agent-harness" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">View repository</a>
+              <a href="https://github.com/TheElephantCoder/agent-harness/blob/main/docs/cli.md" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Docs</a>
+            </div>
+          </div>
+          <div class="project__visual">
+            <div class="codecard">
+              <div class="codecard__head mono"><span>● ● ●</span> harness — init</div>
+<pre><span class="c">$ harness init --auto</span>
+<span class="v">✓</span> wired to opencode, claude, cursor
+
+<span class="c">$ harness skill add research-first</span>
+<span class="v">✓</span> available in all 8 harnesses
+
+<span class="c">$ harness bench --quick</span>
+<span class="v">cold start</span> 13s <span class="v">· p99 hook</span> &lt;100ms</pre>
+              <div class="codecard__foot">
+                <span class="mono">8 ADAPTERS · 22 COMMITS</span>
+                <span class="mono">npm · pipx · brew · apt</span>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="mono">cold start</span><strong>13s</strong></div>
+              <div class="stat"><span class="mono">tokens</span><strong>-65%</strong></div>
+              <div class="stat"><span class="mono">hooks</span><strong>&lt;100ms</strong></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
       <!-- bit-compact -->
       <article class="project project--featured" data-tilt>
@@ -217,45 +265,6 @@ r.get_quantized_into(<span class="n">42</span>, &<span class="k">mut</span> buf)
         </div>
       </article>
 
-      <!-- NexUSB -->
-      <article class="project" data-tilt>
-        <div class="project__top">
-          <div class="project__eyebrow mono">SYSTEM TOOLKIT · SHELL / PYTHON <span class="tag tag--unfinished">UNFINISHED</span></div>
-          <div class="project__year mono"><span data-commits="TheElephantCoder/NexUSB">85</span> COMMITS · x86_64 + ARM64</div>
-        </div>
-        <div class="project__body">
-          <div class="project__main">
-            <h3>NexUSB</h3>
-            <p class="project__tagline">Professional bootable USB rescue toolkit. 150+ utilities, one stick.</p>
-            <p class="project__text">
-              Boots a live Linux environment for malware scanning, data recovery, disk work, networking, and remote access.
-              Two builds — minimal (~2GB) and full (~32GB) — with GTK GUI and per-category text menus. Builds on Linux, Docker, or WSL2.
-            </p>
-            <ul class="project__bullets">
-              <li>ClamAV, TestDisk, GParted, Wireshark, nmap, Remmina, chntpw</li>
-              <li>UEFI + Legacy BIOS, Secure Boot-aware GRUB</li>
-              <li>Multi-partition layout: boot / live / Windows / ISOs</li>
-            </ul>
-            <div class="project__tags"><span>Shell</span><span>Python</span><span>GRUB</span><span>Live Linux</span><span>GTK</span></div>
-            <div class="project__links">
-              <a href="https://github.com/TheElephantCoder/NexUSB" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">View repository</a>
-              <a href="https://github.com/TheElephantCoder/NexUSB/blob/main/docs/TOOLS.md" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Tools index</a>
-            </div>
-          </div>
-          <div class="project__visual project__visual--nex">
-            <div class="nex__preview">
-              <div class="nex__bar mono">NexUSB — minimal vs full</div>
-              <div class="nex__rows">
-                <div class="nex__row"><span>Minimal</span><span>NexUSB-Minimal.iso</span><span>~2 GB</span></div>
-                <div class="nex__row"><span>Full</span><span>NexUSB.iso + .img</span><span>~32 GB</span></div>
-                <div class="nex__row"><span>Arch</span><span>amd64 · arm64</span><span>UEFI / BIOS</span></div>
-              </div>
-              <div class="nex__cmd mono">sudo ./build-minimal.sh &nbsp;·&nbsp; ./docker/build-in-docker.sh minimal</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
       <!-- claw-security-auditor -->
       <article class="project" data-tilt>
         <div class="project__top">
@@ -295,7 +304,46 @@ r.get_quantized_into(<span class="n">42</span>, &<span class="k">mut</span> buf)
         </div>
       </article>
 
-    </div>
+      <!-- NexUSB -->
+      <article class="project" data-tilt>
+        <div class="project__top">
+          <div class="project__eyebrow mono">SYSTEM TOOLKIT · SHELL / PYTHON <span class="tag tag--unfinished">UNFINISHED</span></div>
+          <div class="project__year mono"><span data-commits="TheElephantCoder/NexUSB">85</span> COMMITS · x86_64 + ARM64</div>
+        </div>
+        <div class="project__body">
+          <div class="project__main">
+            <h3>NexUSB</h3>
+            <p class="project__tagline">Professional bootable USB rescue toolkit. 150+ utilities, one stick.</p>
+            <p class="project__text">
+              Boots a live Linux environment for malware scanning, data recovery, disk work, networking, and remote access.
+              Two builds — minimal (~2GB) and full (~32GB) — with GTK GUI and per-category text menus. Builds on Linux, Docker, or WSL2.
+            </p>
+            <ul class="project__bullets">
+              <li>ClamAV, TestDisk, GParted, Wireshark, nmap, Remmina, chntpw</li>
+              <li>UEFI + Legacy BIOS, Secure Boot-aware GRUB</li>
+              <li>Multi-partition layout: boot / live / Windows / ISOs</li>
+            </ul>
+            <div class="project__tags"><span>Shell</span><span>Python</span><span>GRUB</span><span>Live Linux</span><span>GTK</span></div>
+            <div class="project__links">
+              <a href="https://github.com/TheElephantCoder/NexUSB" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">View repository</a>
+              <a href="https://github.com/TheElephantCoder/NexUSB/blob/main/docs/TOOLS.md" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Tools index</a>
+            </div>
+          </div>
+          <div class="project__visual project__visual--nex">
+            <div class="nex__preview">
+              <div class="nex__bar mono">NexUSB — minimal vs full</div>
+              <div class="nex__rows">
+                <div class="nex__row"><span>Minimal</span><span>NexUSB-Minimal.iso</span><span>~2 GB</span></div>
+                <div class="nex__row"><span>Full</span><span>NexUSB.iso + .img</span><span>~32 GB</span></div>
+                <div class="nex__row"><span>Arch</span><span>amd64 · arm64</span><span>UEFI / BIOS</span></div>
+              </div>
+              <div class="nex__cmd mono">sudo ./build-minimal.sh &nbsp;·&nbsp; ./docker/build-in-docker.sh minimal</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div></div>
   </div>
 </section>
 
@@ -396,7 +444,7 @@ r.get_quantized_into(<span class="n">42</span>, &<span class="k">mut</span> buf)
 
 <div id="repos-note" class="repos-note">
   <div class="wrap">
-    <p class="mono"><span style="color:var(--accent)">*</span> 3 featured repos — bit-compact, NexUSB, claw-security-auditor. Excludes profile README (<code>TheElephantCoder</code>) and portfolio site (<code>theelephantcoder.github.io</code>). Total public repos: 5.</p>
+    <p class="mono"><span style="color:var(--accent)">*</span> 4 featured repos — bit-compact, NexUSB, claw-security-auditor, agent-harness. Excludes profile README (<code>TheElephantCoder</code>) and portfolio site (<code>theelephantcoder.github.io</code>). Total public repos: 6.</p>
   </div>
 </div>
 
