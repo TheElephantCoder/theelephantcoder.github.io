@@ -19,6 +19,6 @@ Just vanilla HTML/CSS/JS. Type is Inter + Instrument Serif. Dark, editorial, fas
 
 ## Contact
 
-GitHub: @TheElephantCoder — that's the best place to reach me. Also on YouTube, X, Instagram, TikTok as @theelephantcoder.
+GitHub: @TheElephantCoder — that's the best place to reach me. Also on YouTube, Instagram, and TikTok as @theelephantcoder. My X username is @ElephantCoder0
 
 © 2026 TheElephantCoder
