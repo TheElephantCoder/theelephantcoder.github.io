@@ -6,10 +6,9 @@ I build small, focused, open-source tools and this is where I keep them. No agen
 
 ## What's here
 
-- **bit-compact** — Rust engine for SQ8 quantization, 4× smaller embeddings, zero-alloc seeks
-- **NexUSB** — bootable USB rescue toolkit (150+ tools) — **unfinished**
-- **claw-security-auditor** — static auditor for OpenClaw skills, 44 rules, risk scoring
 - **agent-harness** — performance layer for coding agents, 8 adapters, 13s cold start
+- **bit-compact** — Rust engine for SQ8 quantization, 4× smaller embeddings, zero-alloc seeks
+- **claw-security-auditor** — static auditor for OpenClaw skills, 44 rules, risk scoring
 
 All repos are public on GitHub. If something is useful or breaks, open an issue.
 
@@ -19,6 +18,6 @@ Just vanilla HTML/CSS/JS. Type is Inter + Instrument Serif. Dark, editorial, fas
 
 ## Contact
 
-GitHub: @TheElephantCoder — that's the best place to reach me. Also on YouTube, Instagram, and TikTok as @theelephantcoder. My X username is @ElephantCoder0
+GitHub: @TheElephantCoder — that's the best place to reach me. Also on YouTube, X, Instagram, TikTok as @theelephantcoder.
 
 © 2026 TheElephantCoder
